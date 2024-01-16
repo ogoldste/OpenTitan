@@ -11,7 +11,7 @@
 
 steps:
   - task: DownloadSecureFile@1
-    condition: eq(variables['Build.SourceBranchName'], 'master')
+    condition: eq(variables['Build.SourceBranchName'], 'ci-bazel-cache')
     name: GCP_BAZEL_CACHE_KEY
     inputs:
       secureFile: "bazel_cache_gcp_key.json"
